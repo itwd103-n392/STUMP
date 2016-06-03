@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<!-- Bootstrap Core CSS -->
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
+	
+		<!-- Custom CSS -->
+		<link href="../../css/toggle-sidebar.css" rel="stylesheet">
+	</head>
+	<body>
+		<script>
+			  function toNum(n){
+				  return parseInt(n);
+			  }
+			  function add(n1, n2){
+				  sum=toNum(n1) + toNum(n2);
+				output(sum);
+			  } 
+			  function subtract(n1, n2){
+				  diff=toNum(n1) - toNum(n2);
+				output(diff);
+			  } 
+			  function multiplication(n1, n2){
+				  product=toNum(n1) * toNum(n2);
+				output(product);
+			  } 
+			  function division(n1, n2){
+				  quotient=toNum(n1) / toNum(n2);
+				output(quotient);
+			  } 
+			  function output(res){
+				  alert(res);
+			  }
+		</script>
+		<form name="calc">
+			  Num1: <input color="ffffff" type="text" id="num1"><br>
+			  Num2: <input type="text" id="num2"><br>
+		</form>
+		
+		<div class="container">
+			<div class="row" width="50px">
+				<div class="col-md-6">
+					<button class="btn-primary" onclick="add(document.querySelector('#num1').value, document.querySelector('#num2').value)">Add</button>
+					<button class="btn-warning" onclick="subtract(document.querySelector('#num1').value, document.querySelector('#num2').value)">Subtract</button>
+				</div>
+			</div>
+			<div class="row" width="50px>
+				<div class="col-md-6">
+					<button class="btn-success" onclick="multiplication(document.querySelector('#num1').value, document.querySelector('#num2').value)">Multiply</a></button>
+					<button class="btn-danger" onclick="division(document.querySelector('#num1').value, document.querySelector('#num2').value)">Divide</button>
+				</div>
+			</div>
+		</div>
+		<!-- jQuery -->
+		<script src="../js/jquery.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../js/bootstrap.min.js"></script>
+	</body>
+</html>
